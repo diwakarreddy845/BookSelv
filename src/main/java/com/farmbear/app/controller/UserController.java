@@ -22,8 +22,8 @@ public class UserController {
     }
 
     @PutMapping("/saveUser")
-    public void save(@RequestBody User user) {
-        this.userService.addUser(user);
+    public User save(@RequestBody User user) {
+        return this.userService.addUser(user);
     }
 
     @PostMapping("/updateUser")
