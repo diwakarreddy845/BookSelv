@@ -14,8 +14,8 @@ public class Book {
     private String author;
     private int edition;
     private Date publishedDate;
-    private boolean eBookavailable;
-    private String catogery;
+    private boolean eBook;
+    private String category;
 
     protected Book() {
     }
@@ -65,19 +65,19 @@ public class Book {
         this.publishedDate = publishedDate;
     }
 
-    public boolean iseBookavailable() {
-        return eBookavailable;
+    public boolean iseBook() {
+        return eBook;
     }
 
-    public void seteBookavailable(boolean eBookavailable) {
-        this.eBookavailable = eBookavailable;
+    public void seteBook(boolean eBook) {
+        this.eBook = eBook;
     }
 
-    public String getCatogery() {
-        return catogery;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCatogery(String catogery) {
-        this.catogery = catogery;
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
