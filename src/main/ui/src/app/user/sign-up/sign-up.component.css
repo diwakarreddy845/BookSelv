@@ -1,0 +1,20 @@
+.example-form {
+    min-width: 150px;
+    max-width: 400px;
+    margin-left: 270px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+
+  .btn-primary {
+    background-color: #6648b1;
+    border: 1px solid #563d7c;
+  }
+  
+  .btn-primary:hover {
+    background-color: #563d7c;
+    border: 1px solid #563d7c;
+  }

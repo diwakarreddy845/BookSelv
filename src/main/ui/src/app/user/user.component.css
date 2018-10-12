@@ -1,0 +1,19 @@
+
+.justify-content-center{
+    justify-content: center
+}
+
+.nav .nav-tabs{
+    max-width: 200px;
+    margin-left: 270px;
+}
+
+.btn-primary {
+    background-color: #6648b1;
+    border: 1px solid #563d7c;
+  }
+  
+  .btn-primary:hover {
+    background-color: #563d7c;
+    border: 1px solid #563d7c;
+  }

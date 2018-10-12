@@ -1,0 +1,27 @@
+<div class="container">
+  <form class="example-form" [formGroup]="loginForm">
+    <h3>Sign In</h3>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Email" formControlName="email" >
+      <mat-error *ngIf="loginForm.hasError()">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      <mat-error *ngIf="loginForm.hasError()">
+        Password is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+
+    <div class="button-row">
+      <button type="button" class="btn btn-primary"   [disabled]="!loginForm.valid" (click)="userSignIn()">Login</button>
+      <button type="button" class="btn btn-primary" routerLink="/registration"> Register</button>
+      <button type="button" class="btn btn-warning" routerLink="/"> cancel</button>
+    </div>
+  </form>
+</div>
+<div *ngIf="loginerror">login Failed!!!</div>

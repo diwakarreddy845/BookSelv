@@ -1,0 +1,36 @@
+<div class="container">
+  <form class="example-form" [formGroup]="bookDetailsForm">
+    <h3>Book Details Form</h3>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Author" formControlName="author">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Edition" formControlName="edition">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput [matDatepicker]="picker" placeholder="Publish date" formControlName="publishedDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <!-- <mat-form-field class="example-full-width">
+      <input matInput placeholder="E-Book" formControlName="eBook">
+    </mat-form-field> -->
+    <mat-form-field class="example-full-width">
+      <mat-select placeholder="E-Book" formControlName="eBook">
+        <mat-option value="true">Yes</mat-option>
+        <mat-option value="false">No</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Category" formControlName="category">
+    </mat-form-field>
+  </form>
+</div>
+<div class="container">
+  <button type="button" class="btn btn-primary" [disabled]="!bookDetailsForm.valid" [mat-dialog-close]="bookDetailsForm" >Save
+  </button>
+  <button type="button" class="btn btn-warning" (click)="onCancel()"> cancel</button>
+</div>

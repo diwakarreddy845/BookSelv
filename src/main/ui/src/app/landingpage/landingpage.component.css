@@ -1,0 +1,24 @@
+example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: orange;
+  }
+
+  .button-row button,
+.button-row a {
+  margin-right: 8px;
+}
+
+.highlight{
+  background:silver; /* green */
+}
